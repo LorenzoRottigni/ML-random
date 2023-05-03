@@ -1,5 +1,6 @@
 import numpy as np
 import scikitplot as skplt
+import matplotlib.pyplot as plt
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, classification_report
 
 """
@@ -26,3 +27,8 @@ print(f"Misclassification: {1-acc}")
 
 report = classification_report(y, p)
 print(report)
+
+# Geberate confusion matrix graph to represent the classification report
+skplt.metrics.plot_confusion_matrix(y, p)
+
+plt.show()
